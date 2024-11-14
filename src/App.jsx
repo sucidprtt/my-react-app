@@ -1,34 +1,29 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import Card from './components/Card'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div>
+      <h1>Toko Buah</h1>
+      <Card 
+      name="Apel"
+      img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQykDdD0ozB-6zlhMHbWBlAqsLyX6cZw5jxMQ&s" 
+      harga="15000"
+      stok="15"
+      />
+      <Card 
+      name="Jeruk"
+      img="https://static.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/jawapos/2020/01/Jeruk-Mandarin-Pixabay.jpg"
+      harga="20000"
+      stok="20"
+      />
+      <Card 
+      name="Manga"
+      img="https://cdn.rri.co.id/berita/Baubau/o/1730381938823-Mangga_ASTRO/ujh9whw5ghdmjd0.jpeg" 
+      harga="30000"
+      stok="30"
+      />
+    </div>
   )
 }
 
